@@ -1,0 +1,25 @@
+.update-place {
+  list-style: none;
+  margin: 5rem auto;
+  padding: 1rem;
+  width: 90%;
+  max-width: 40rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  border-radius: 6px;
+  background: white;
+}
+
+.update-place input,
+.update-place textarea {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.update-place button {
+  margin-top: 1rem;
+}
+
+.update-place p {
+  color: #ff0000;
+  margin: 0;
+}

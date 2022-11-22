@@ -1,0 +1,19 @@
+.login-form {
+  list-style: none;
+  margin: 5rem auto;
+  padding: 1rem;
+  width: 90%;
+  max-width: 40rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  border-radius: 6px;
+  background: white;
+}
+
+.login-form button {
+  margin: 1rem 0;
+}
+
+.login-form p {
+  color: #ff0000;
+  margin: 0;
+}

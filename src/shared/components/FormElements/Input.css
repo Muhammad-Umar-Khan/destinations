@@ -1,0 +1,15 @@
+.form-control input {
+  height: 2rem;
+}
+
+.form-control input,
+.form-control textarea {
+  width: 100%;
+  font-size: 16px;
+  margin-bottom: 0.5rem;
+}
+
+.label {
+  color: #ff0055;
+  font-weight: bold;
+}
