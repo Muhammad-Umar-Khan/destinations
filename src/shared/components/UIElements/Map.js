@@ -1,5 +1,5 @@
 import { useState } from "react";
-import MapBox, { Marker } from "react-map-gl";
+import MapBox from "react-map-gl";
 
 const Map = ({ coordinates }) => {
   const [viewport, setViewport] = useState({
@@ -16,6 +16,7 @@ const Map = ({ coordinates }) => {
         }
         style={{ width: "100%", height: "100%" }}
         mapStyle="mapbox://styles/mapbox/streets-v9"
+        onMove={(viewport) => setViewport(viewport)}
       />
     </div>
   );

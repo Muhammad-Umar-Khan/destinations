@@ -5,7 +5,7 @@ import Button from "../../shared/components/FormElements/Button";
 import Input from "../../shared/components/FormElements/Input";
 import "./Login.css";
 import { loginAction } from "../../store/actions/loginAction";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 
 const validationSchema = Yup.object().shape({
   email: Yup.string().email().required(),
@@ -13,8 +13,6 @@ const validationSchema = Yup.object().shape({
 });
 
 const Login = () => {
-  const login = useSelector((state) => state.loginReducer.login);
-  console.log(login);
   const dispatch = useDispatch();
   const initialValues = {
     email: "",
