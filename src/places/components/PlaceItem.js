@@ -4,6 +4,7 @@ import Card from "../../shared/components/UIElements/Card";
 import Button from "../../shared/components/FormElements/Button";
 import Modal from "../../shared/components/UIElements/Modal";
 import Map from "../../shared/components/UIElements/Map";
+import { useSelector } from "react-redux";
 
 import "./PlaceItem.css";
 const PlaceItem = ({
@@ -15,6 +16,7 @@ const PlaceItem = ({
   creatorId,
   coordinates,
 }) => {
+  const login = useSelector((state) => state.loginReducer.login);
   const [showMap, setShowMap] = useState(false);
   const [deleteWarning, setDeleteWarning] = useState(false);
   const openMapHandler = () => setShowMap(true);
@@ -82,10 +84,12 @@ const PlaceItem = ({
             <Button inverse onClick={openMapHandler}>
               VIEW ON MAP
             </Button>
-            <Button to={`/places/${id}`}>EDIT</Button>
-            <Button danger onClick={showDeleteWarningHandler}>
-              DELETE
-            </Button>
+            {login && <Button to={`/places/${id}`}>EDIT</Button>}
+            {login && (
+              <Button danger onClick={showDeleteWarningHandler}>
+                DELETE
+              </Button>
+            )}
           </div>
         </Card>
       </li>

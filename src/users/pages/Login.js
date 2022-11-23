@@ -66,7 +66,9 @@ const Login = () => {
               ) : (
                 ""
               )}
-              <Button type="submit">Login</Button>
+              <Button type="submit" onClick={handleSubmit}>
+                Login
+              </Button>
               <div>
                 <Link to={"/users/auth"}>
                   <span>New user?</span>
