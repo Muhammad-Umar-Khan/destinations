@@ -4,13 +4,18 @@ import * as Yup from "yup";
 import Button from "../../shared/components/FormElements/Button";
 import Input from "../../shared/components/FormElements/Input";
 import "./Login.css";
+import { loginAction } from "../../store/actions/loginAction";
+import { useDispatch, useSelector } from "react-redux";
 
 const validationSchema = Yup.object().shape({
-  email: Yup.string().required(),
+  email: Yup.string().email().required(),
   password: Yup.string().required(),
 });
 
 const Login = () => {
+  const login = useSelector((state) => state.loginReducer.login);
+  console.log(login);
+  const dispatch = useDispatch();
   const initialValues = {
     email: "",
     password: "",
@@ -25,6 +30,7 @@ const Login = () => {
         onSubmit={(values, { resetForm }) => {
           alert(JSON.stringify(values, null, 2));
           resetForm({ values: "" });
+          dispatch(loginAction());
         }}
       >
         {({
@@ -37,7 +43,7 @@ const Login = () => {
           errors,
         }) => {
           return (
-            <Form>
+            <>
               <Input
                 type="email"
                 element="input"
@@ -60,13 +66,13 @@ const Login = () => {
               ) : (
                 ""
               )}
-              <Button type="Submit">Login</Button>
+              <Button type="submit">Login</Button>
               <div>
                 <Link to={"/users/auth"}>
                   <span>New user?</span>
                 </Link>
               </div>
-            </Form>
+            </>
           );
         }}
       </Formik>

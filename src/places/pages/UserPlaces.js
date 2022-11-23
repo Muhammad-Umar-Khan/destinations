@@ -22,8 +22,8 @@ const places = [
       "https://media.istockphoto.com/id/1178852373/photo/canadian-flag-flying-over-old-quebec-city.jpg?s=612x612&w=0&k=20&c=0dsOXraklB5DCLYeYVpmDxfgquLlVSalCcHacs0LgTY=",
     address: "Vancouver, BC V6T 1Z4, Canada",
     location: {
-      lat: 40.7484405,
-      lng: -73.9856644,
+      lat: 43.6406767,
+      lng: -79.3859721,
     },
     creator: "u2",
   },

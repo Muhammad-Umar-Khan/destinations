@@ -8,7 +8,7 @@ import "./PlaceList.css";
 const PlaceList = ({ items }) => {
   if (items.length === 0) {
     return (
-      <Card style={{ marginTop: 50 }}>
+      <Card>
         <h1>No places found. Maybe create one?</h1>
         <Link to="/places/new">
           <button>Share place</button>
