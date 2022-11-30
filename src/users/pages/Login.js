@@ -4,7 +4,7 @@ import * as Yup from "yup";
 import Button from "../../shared/components/FormElements/Button";
 import Input from "../../shared/components/FormElements/Input";
 import "./Login.css";
-import { loginAction } from "../../store/actions/loginAction";
+import { loginAction } from "../../store/actions/user_actions";
 import { useDispatch } from "react-redux";
 
 const validationSchema = Yup.object().shape({
